@@ -22,8 +22,6 @@ public final class FigureTypeMatchPreProcessor implements FigurePreProcessor {
     @Override
     public boolean process(FigureType type, Point... points) throws FigureException{
         if(type.getCountOfPoints() != points.length){
-            System.out.println(type.getCountOfPoints());
-            System.out.println(points.length);
             throw new FigureNotExistException("type of figure and count of points does not match");
         }
         return true;
