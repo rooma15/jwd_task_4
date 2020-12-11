@@ -28,16 +28,17 @@ public class FigureApplicationContext implements ApplicationContext {
         }
     };
 
-    public void setPreProcessorStorage(FigurePreProcessorStorage storage){
+    @Override
+    public void setPreProcessorStorage(FigurePreProcessorStorage storage) {
         preProcessorStorage = storage;
     }
 
-
+    @Override
     public void setPostProcessorStorage(FigurePostProcessorStorage storage){
         postProcessorStorage = storage;
     }
 
-    public static ApplicationContext getFigureApplicationContext(){
+    public static FigureApplicationContext getFigureApplicationContext(){
         if(context == null){
             context = new FigureApplicationContext();
         }
